@@ -13,17 +13,28 @@ public class CreatorSliders : MonoBehaviour
 
     public Slider ZPositionSlider;
 
-    public Slider VRotateSlider;
+    public Slider XRotateSlider;
 
-    public Slider HRotateSlider;
+    public Slider YRotateSlider;
+
+    public Slider ZRotateSlider;
 
     public Slider ScaleSlider;
 
     // Update is called once per frame
+
+
+
+
     void Update()
     {
+        if (Object == null)
+        {
+            Object = GameObject.Find("WavefrontObject");
+        }
+
         Object.transform.position = new Vector3(XPositionSlider.value, YPositionSlider.value, ZPositionSlider.value);
-        Object.transform.eulerAngles = new Vector3(VRotateSlider.value, HRotateSlider.value, 0);
+        Object.transform.eulerAngles = new Vector3(XRotateSlider.value, YRotateSlider.value, ZRotateSlider.value);
         Object.transform.localScale = new Vector3(ScaleSlider.value, ScaleSlider.value, ScaleSlider.value);
     }
 }
