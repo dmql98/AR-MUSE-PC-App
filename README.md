@@ -1,2 +1,2 @@
-# AR-Muse-App
-mobile app for AR muse
+# AR-Muse-Artist App
+PC app for AR muse 
